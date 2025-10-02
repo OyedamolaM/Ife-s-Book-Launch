@@ -5,7 +5,7 @@ import "./Navbar.scss";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">Book Launch</div>
+      <div className="logo">Ife Oluborode</div>
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
         <li><ScrollLink to="about" smooth={true} duration={500}>About</ScrollLink></li>

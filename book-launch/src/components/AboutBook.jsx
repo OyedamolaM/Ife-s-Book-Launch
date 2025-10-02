@@ -15,14 +15,20 @@ export default function AboutBook() {
         <div className="book-text">
           <h2>About the Book</h2>
           <p>
-            This book is your ultimate guide to creating endless content ideas
-            without the stress. Designed for wellness founders and creatives
-            who want to show up consistently online.
+            The <strong>90-Day Easy Wellness Content Ideas</strong> workbook is your ultimate guide
+            to never run out of content inspiration. Designed for wellness coaches and brands,
+            it’s filled with ready-to-use prompts that help you show up consistently online.
           </p>
+          <p>
+            Whether you want to educate, inspire, or promote your services, this workbook gives
+            you actionable ideas you can implement immediately. Stay consistent, save time, and
+            build a confident online presence.
+          </p>
+          
           <ul>
-            <li>✅ 90 Done-for-you content prompts</li>
-            <li>✅ Step-by-step frameworks</li>
-            <li>✅ Practical examples you can copy</li>
+            <li>90 ready-to-use content prompts</li>
+            <li>Step-by-step frameworks for effortless planning</li>
+            <li>Practical examples you can replicate instantly</li>
           </ul>
         </div>
       </div>

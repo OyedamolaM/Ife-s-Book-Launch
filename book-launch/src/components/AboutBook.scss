@@ -3,7 +3,9 @@
 
 .about-book {
   padding: $section-padding;
-  background: white;
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+  color: $text-dark;
 
   .about-container {
     max-width: 1200px;
@@ -19,33 +21,92 @@
     }
   }
 
-  .book-image img {
-    max-width: 280px;
-    margin: 0 auto;
-    filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.1));
+  .book-image {
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 320px;
+      border-radius: 16px;
+      filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.12));
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
   }
 
   .book-text {
     h2 {
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: clamp(2rem, 2.5vw, 2.5rem);
+      font-weight: 800; // slightly lighter for elegance
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.5px;
       color: $text-dark;
     }
 
     p {
       margin: 1rem 0;
-      font-size: 1.125rem;
+      font-size: clamp(1rem, 1.25vw, 1.125rem);
       color: $text-gray;
-      line-height: 1.6;
+      line-height: 1.7;
+      font-weight: 500; // elegant medium weight
+      text-align: left;
     }
 
     ul {
-      margin-top: 1rem;
+      margin-top: 1.5rem;
+      padding-left: 0;
+      list-style: none;
 
       li {
-        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
         font-weight: 500;
+        font-size: 1.05rem;
         color: $text-dark;
+
+        &::before {
+          content: "✔";
+          color: $primary;
+          font-weight: 700;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .book-image img {
+      max-width: 300px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .book-image img {
+      max-width: 260px;
+    }
+
+    .book-text {
+      h2 {
+        font-size: 1.75rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      ul li {
+        font-size: 0.98rem;
+        flex-wrap: wrap; // checkmark and text stay in one line but wrap naturally
+        justify-content: flex-start;
       }
     }
   }

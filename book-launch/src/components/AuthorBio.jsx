@@ -15,10 +15,9 @@ export default function AuthorBio() {
         <div className="author-text">
           <h2>Meet the Author</h2>
           <p>
-            Hi, I’m Ifeoluwa Oluborode — a registered Paediatric Nurse, wellness writer, content creator, and
-            coach. I’ve helped hundreds of founders grow their online presence
-            without burning out. This book is a reflection of my experience,
-            packed with practical strategies you can use right away.
+            Hi, I'm Ifeoluwa Oluborode, a registered nurse, health writer, and content creator. <br />
+            I've helped hundreds of health brands and founders grow their online presence through my teachings.
+            <br />This book is packed with content ideas to help every wellness brand and founders stay consistent online.
           </p>
           <p className="quote">
             “Consistency beats perfection every single time.”

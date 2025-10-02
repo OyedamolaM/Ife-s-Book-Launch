@@ -1,0 +1,96 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.site-footer {
+  background: #350452;;
+  color: white;
+  padding: 4rem 2rem;
+  font-family: 'Inter', sans-serif;
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    text-align: center;
+
+    @include respond(tablet) {
+      text-align: left;
+    }
+
+    .footer-brand {
+      h2 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+
+    .footer-links {
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 0.5rem;
+
+          a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-social {
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        @include respond(tablet) {
+          justify-content: flex-start;
+        }
+
+        a {
+          color: white;
+          font-size: 1.25rem;
+          transition: transform 0.3s, color 0.3s;
+
+          &:hover {
+            transform: scale(1.2);
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: white;
+  }
+}
