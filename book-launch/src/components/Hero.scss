@@ -1,0 +1,127 @@
+@import "../styles/variables";
+
+.hero {
+  background: $bg-light;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+  .hero-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: nowrap; // keep side by side
+  }
+
+  .hero-text {
+    flex: 1 1 0;
+    min-width: 0;
+
+    h1 {
+      font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+      font-weight: 800;
+      color: $text-dark;
+      line-height: 1.2;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: clamp(0.85rem, 2.7vw, 2rem);
+      color: $text-gray;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: clamp(0.6rem, 1vw, 1rem) clamp(1.2rem, 2vw, 2rem);
+      font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+      background: $primary;
+      color: white;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: darken($primary, 8%);
+      }
+    }
+  }
+
+  .hero-image {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: clamp(140px, 40vw, 500px); // default mobile size
+      height: auto;
+      filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.2));
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+/* Tablet: increase image */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-image img {
+    // max-width: clamp(140px, 45vw, 320px); // default mobile size
+}
+
+  .hero {
+    padding: 3.5rem 2rem;
+  }
+
+  .hero-container {
+    gap: 1.5rem;
+  }
+
+  .hero-text .cta-btn {
+    padding: clamp(0.6rem, 1vw, 0.9rem) clamp(1rem, 1.5vw, 1.5rem);
+  }
+}
+
+
+
+/* Small tablets & phones */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+  .hero-image img {
+    // max-width: clamp(140px, 30vw, 320px); // default mobile size
+  }
+
+  .hero-container {
+    gap: 1rem;
+  }
+
+  .hero-text .cta-btn {
+    font-size: clamp(0.85rem, 1vw, 0.95rem);
+    padding: clamp(0.5rem, 0.8vw, 0.8rem) clamp(1rem, 1.2vw, 1.2rem);
+  }
+}
+
+/* Mobile: fully intact */
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-container {
+    gap: 0.8rem;
+  }
+
+  .hero-text .cta-btn {
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+    padding: clamp(0.4rem, 0.7vw, 0.6rem) clamp(0.8rem, 1vw, 1rem);
+  }
+}

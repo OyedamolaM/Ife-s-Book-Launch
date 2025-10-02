@@ -1,0 +1,99 @@
+.payment-section {
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+
+  .card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+
+    .book-details {
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      color: #4f46e5;
+
+      span {
+        display: block;
+        font-size: 0.875rem;
+        color: #777;
+      }
+    }
+
+    .form-group {
+      text-align: left;
+      margin-bottom: 1.5rem;
+
+      label {
+        display: block;
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 0.5rem;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+
+        &:focus {
+          outline: none;
+          border-color: #4f46e5;
+          box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+        }
+      }
+
+      .error {
+        color: red;
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 0.9rem;
+      background: #4f46e5;
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover:not(:disabled) {
+        background: #3730a3;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+
+    .secure-note {
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 1rem;
+    }
+  }
+}

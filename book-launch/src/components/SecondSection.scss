@@ -1,0 +1,125 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.second-section {
+  padding: 5rem 2rem;
+  background: white;
+
+  .container {
+    display: grid;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include respond(tablet) {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    .image-block img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .text-block {
+      h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $text-dark;
+        margin-bottom: 1.5rem;
+      }
+
+      .problems {
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-size: 1.1rem;
+          margin-bottom: 0.75rem;
+          color: $text-gray;
+        }
+      }
+    }
+  }
+
+  /* === Shortcut section === */
+  .shortcut {
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include respond(tablet) {
+      grid-template-columns: 1fr 1fr; /* split evenly */
+      align-items: center;
+    }
+
+    .book-img {
+      width: 100%; /* fills its 50% column */
+      img {
+        width: 100%;     /* fills column */
+        height: auto;    /* scale naturally */
+        object-fit: contain;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        display: block;
+      }
+    }
+
+    .shortcut-text {
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 1.1rem;
+        color: $text-gray;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  /* === What's inside === */
+  .whats-inside {
+    margin-top: 4rem;
+    text-align: center;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .icons {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+
+      @include respond(tablet) {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .icon-item {
+        text-align: center;
+        max-width: 200px;
+
+        .icon {
+          color: $primary;
+          margin-bottom: 0.75rem;
+        }
+
+        p {
+          font-size: 1rem;
+          color: $text-gray;
+        }
+      }
+    }
+  }
+}

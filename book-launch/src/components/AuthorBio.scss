@@ -1,0 +1,50 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.author-bio {
+  padding: $section-padding;
+  background: $bg-light;
+
+  .author-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 3rem;
+    text-align: center;
+
+    @include respond(tablet) {
+      grid-template-columns: 1fr 1fr;
+      text-align: left;
+      align-items: center;
+    }
+  }
+
+  .author-image img {
+    max-width: 250px;
+    border-radius: 50%;
+    margin: 0 auto;
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.15));
+  }
+
+  .author-text {
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $text-dark;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: $text-gray;
+    }
+
+    .quote {
+      margin-top: 1.5rem;
+      font-style: italic;
+      font-weight: 500;
+      color: $primary;
+    }
+  }
+}
