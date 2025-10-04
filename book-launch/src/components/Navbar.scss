@@ -62,9 +62,42 @@
 
   .menu-toggle {
     display: none;
-    font-size: 1.5rem;
-    color: #333;
+    width: 25px;
+    height: 20px;
+    position: relative;
     cursor: pointer;
+
+    span {
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: #333;
+      left: 0;
+      transition: all 0.4s ease;
+      border-radius: 2px;
+    }
+    span:nth-child(1) {
+      top: 0;
+    }
+    span:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    span:nth-child(3) {
+      bottom: 0;
+    }
+
+    &.open span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 50%;
+    }
+    &.open span:nth-child(2) {
+      opacity: 0;
+    }
+    &.open span:nth-child(3) {
+      transform: rotate(-45deg);
+      bottom: 50%;
+    }
   }
 }
 
@@ -79,6 +112,7 @@
 @media (max-width: 600px) {
   .navbar {
     flex-wrap: wrap;
+    position: sticky;
 
     .menu-toggle {
       display: block;
@@ -88,15 +122,31 @@
       flex-direction: column;
       gap: 1rem;
       width: 100%;
-      margin-top: 1rem;
-      display: none;
+      margin-top: 0; /* remove margin that pushed content */
+      
+      /* Make it overlay instead of pushing content */
+      position: absolute;
+      top: 100%; /* right below navbar */
+      left: 0;
+      background: #fff;
+      z-index: 999;
+      padding: 1rem 2rem;
+
+      /* Slide + fade animation */
+      transform: translateY(-20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.4s ease, opacity 0.4s ease;
 
       &.open {
-        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
       }
     }
   }
 }
+
 
 /* Optional: smooth scroll for anchor links */
 html {

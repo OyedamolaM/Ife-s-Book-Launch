@@ -1,2 +1,15 @@
 @import "variables";
 @import "reset";
+/* App.scss or global CSS */
+.page-wrapper {
+  opacity: 1;
+  transition: opacity 1s ease; /* match JS timeout */
+}
+
+.page-wrapper.fade-out {
+  opacity: 0;
+}
+
+.page-wrapper.fade-in {
+  opacity: 1;
+}
