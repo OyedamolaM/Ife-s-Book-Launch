@@ -34,7 +34,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="logo">Naija Nurse</div>
       <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-        &#9776;
+        {menuOpen ? "✕" : "☰"}
       </div>
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
         <li>
