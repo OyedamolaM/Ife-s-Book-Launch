@@ -5,6 +5,7 @@ import bookImage from "../assets/bg-book-cover.png";
 import { FaRegLightbulb } from "react-icons/fa";
 import { BiBookContent } from "react-icons/bi";
 import { GiFeather } from "react-icons/gi";
+import BuyNowButton from "./BuyNowButton"; // ✅ import button
 
 export default function SecondSection() {
   const sectionRef = useRef(null);
@@ -30,7 +31,7 @@ export default function SecondSection() {
   }, []);
 
   return (
-    <section id="about" className="second-section">
+    <section className="second-section">
       <div className="container">
         <div className="image-block">
           <img src={womanImage} alt="Woman thinking at laptop" />
@@ -41,20 +42,22 @@ export default function SecondSection() {
             Tired of asking yourself… <br />“What do I post today?”
           </h2>
           <ul className="problems">
-            <li>😩 Running out of ideas?</li>
-            <li>⏳ Spending hours brainstorming posts?</li>
-            <li>😓 Struggling to stay consistent?</li>
+            <li>😩 <span>Running out of ideas?</span></li>
+            <li>⏳ <span>Spending hours brainstorming posts?</span></li>
+            <li>😓 <span>Struggling to stay consistent?</span></li>
           </ul>
           <br />
           <div className="shortcut-text">
-          <h2>Here's the Shortcut</h2>
-          <p>
-            90 ready-to-use content ideas designed for wellness brands,
-            coaches & founders — so you can post consistently without the stress.
-          </p>
+            <h2>Here's the Shortcut</h2>
+            <p>
+              90 ready-to-use content ideas designed for wellness brands,
+              coaches & founders — so you can post consistently without the stress.
+            </p>
+
+            {/* ✅ First Buy Now button */}
+            <BuyNowButton />
+          </div>
         </div>
-        </div>
-        
       </div>
 
       <div className="why-book">
@@ -63,13 +66,22 @@ export default function SecondSection() {
         </div>
         <div className="why-text">
           <h2>Why the Book Launch</h2>
-          
-          <p>Taking a break on LinkedIn last year made me realize the struggle of health brands, including wellness founders, face to create content.</p>
-          <p>Content creation starts with the Ideation phase, and many wellness brands/founder get stuck in this phase. </p>
-          <p>This is why I have come up with a solution to help wellness founders/brands with a ready-to-use content bank.</p>
-          <p>So, say goodbye to stress, blank pages, and get instant access to your Wellness Content Bank today so you never run out of ideas again.</p>
+          <p>
+            Taking a break on LinkedIn last year made me realize the struggle of health brands,
+            including wellness founders, face to create content.
+          </p>
+          <p>
+            Content creation starts with the Ideation phase, and many wellness brands/founder get stuck in this phase.
+          </p>
+          <p>
+            This is why I have come up with a solution to help wellness founders/brands with a ready-to-use content bank.
+          </p>
+          <p>
+            So, say goodbye to stress, blank pages, and get instant access to your Wellness Content Bank today so you never run out of ideas again.
+          </p>
 
-
+          {/* ✅ Second Buy Now button */}
+          <BuyNowButton />
         </div>
       </div>
 
@@ -88,6 +100,11 @@ export default function SecondSection() {
             <FaRegLightbulb size={40} className="icon" />
             <p>Wellness-specific hooks</p>
           </div>
+        </div>
+
+        {/* ✅ Third Buy Now button at the bottom */}
+        <div className="cta-bottom">
+          <BuyNowButton />
         </div>
       </div>
     </section>

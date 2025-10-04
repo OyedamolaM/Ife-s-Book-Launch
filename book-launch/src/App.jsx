@@ -6,42 +6,55 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutBook from "./components/AboutBook";
 import AuthorBio from "./components/AuthorBio";
-import PaymentSection from "./pages/PaymentSection";
-import Testimonials from "./pages/Testimonials";
 import Footer from "./components/Footer";
 import SecondSection from "./components/SecondSection";
 
+import CartPage from "./pages/CartPage";
+import PaymentSection from "./pages/PaymentSection";
+import Testimonials from "./pages/Testimonials";
+import BookPreview from "./pages/BookPreview"; // ✅ add preview page
+
+import { CartProvider } from "./context/CartContext";
+
 export default function App() {
   return (
-    <Router>
-      <div className="app">
-        <Navbar />
+    <CartProvider>
+      <Router>
+        <div className="app">
+          <Navbar />
 
-        <main className="main-content">
-          <Routes>
-            {/* Home Page */}
-            <Route
-              path="/"
-              element={
-                <>
-                  <Hero />
-                  <SecondSection />
-                  <AboutBook />
-                  <AuthorBio />
-                </>
-              }
-            />
+          <main className="main-content">
+            <Routes>
+              {/* Home Page */}
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Hero />
+                    <SecondSection />
+                    <AboutBook />
+                    <AuthorBio />
+                  </>
+                }
+              />
 
-            {/* Payments Page */}
-            <Route path="/payments" element={<PaymentSection />} />
+              {/* Book Preview Page */}
+              <Route path="/book-preview" element={<BookPreview />} />
 
-            {/* Testimonials Page */}
-            <Route path="/testimonials" element={<Testimonials />} />
-          </Routes>
-        </main>
+              {/* Cart Page */}
+              <Route path="/cart" element={<CartPage />} />
 
-        <Footer />
-      </div>
-    </Router>
+              {/* Payments Page */}
+              <Route path="/payments" element={<PaymentSection />} />
+
+              {/* Testimonials Page */}
+              <Route path="/testimonials" element={<Testimonials />} />
+            </Routes>
+          </main>
+
+          <Footer />
+        </div>
+      </Router>
+    </CartProvider>
   );
 }

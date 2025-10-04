@@ -38,22 +38,22 @@
       }
     }
 
-    .cta-btn {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: clamp(0.6rem, 1vw, 1rem) clamp(1.2rem, 2vw, 2rem);
-      font-size: clamp(0.9rem, 1.2vw, 1.1rem);
-      background: $primary;
-      color: white;
-      font-weight: 600;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: all 0.3s ease;
+  //   .cta-btn {
+  //     display: inline-block;
+  //     margin-top: 1.5rem;
+  //     padding: clamp(0.6rem, 1vw, 1rem) clamp(1.2rem, 2vw, 2rem);
+  //     font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  //     background: $primary;
+  //     color: white;
+  //     font-weight: 600;
+  //     border-radius: 8px;
+  //     text-decoration: none;
+  //     transition: all 0.3s ease;
 
-      &:hover {
-        background: darken($primary, 8%);
-      }
-    }
+  //     &:hover {
+  //       background: darken($primary, 8%);
+  //     }
+  //   }
   }
 
   .hero-image {
@@ -72,9 +72,9 @@
 
 /* Tablet: increase image */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .hero-image img {
-    // max-width: clamp(140px, 45vw, 320px); // default mobile size
-}
+//   .hero-image img {
+//     // max-width: clamp(140px, 45vw, 320px); // default mobile size
+// }
 
   .hero {
     padding: 3.5rem 2rem;
@@ -84,9 +84,9 @@
     gap: 1.5rem;
   }
 
-  .hero-text .cta-btn {
-    padding: clamp(0.6rem, 1vw, 0.9rem) clamp(1rem, 1.5vw, 1.5rem);
-  }
+  // .hero-text .cta-btn {
+  //   padding: clamp(0.6rem, 1vw, 0.9rem) clamp(1rem, 1.5vw, 1.5rem);
+  // }
 }
 
 
@@ -104,10 +104,10 @@
     gap: 1rem;
   }
 
-  .hero-text .cta-btn {
-    font-size: clamp(0.85rem, 1vw, 0.95rem);
-    padding: clamp(0.5rem, 0.8vw, 0.8rem) clamp(1rem, 1.2vw, 1.2rem);
-  }
+  // .hero-text .cta-btn {
+  //   font-size: clamp(0.85rem, 1vw, 0.95rem);
+  //   padding: clamp(0.5rem, 0.8vw, 0.8rem) clamp(1rem, 1.2vw, 1.2rem);
+  // }
 }
 
 /* Mobile: fully intact */
@@ -120,8 +120,8 @@
     gap: 0.8rem;
   }
 
-  .hero-text .cta-btn {
-    font-size: clamp(0.8rem, 1vw, 0.9rem);
-    padding: clamp(0.4rem, 0.7vw, 0.6rem) clamp(0.8rem, 1vw, 1rem);
-  }
+  // .hero-text .cta-btn {
+  //   font-size: clamp(0.8rem, 1vw, 0.9rem);
+  //   padding: clamp(0.4rem, 0.7vw, 0.6rem) clamp(0.8rem, 1vw, 1rem);
+  // }
 }

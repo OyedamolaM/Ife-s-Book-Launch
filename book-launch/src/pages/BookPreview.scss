@@ -1,0 +1,104 @@
+.book-preview {
+  padding: 3rem 1.5rem;
+
+  .container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  .preview-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .preview-details {
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .tagline {
+      font-weight: 500;
+      color: #1e3a8a;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .toggle-btn {
+      background: transparent;
+      border: none;
+      color: #1e3a8a;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.2rem;
+
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+      }
+    }
+
+    .price-box {
+      margin: 1.5rem 0;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .buy-btn {
+      padding: 0.75rem 1.5rem;
+      background: #1e3a8a;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s ease;
+
+      &:hover {
+        background: #152c6b;
+      }
+    }
+  }
+
+  .sample-preview {
+    margin-top: 3rem;
+    text-align: center;
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    .sample-img {
+      width: 100%;
+      max-width: 350px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      margin: 0 auto;
+    }
+
+    .small-note {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #555;
+    }
+  }
+}

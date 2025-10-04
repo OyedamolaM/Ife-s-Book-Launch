@@ -1,0 +1,33 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.cta-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: clamp(0.6rem, 1vw, 1rem) clamp(1.2rem, 2vw, 2rem);
+      font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+      background: $primary;
+      color: white;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        background: darken($primary, 8%);
+      }
+    }
+
+    @media (max-width: 768px) {
+    .cta-btn {
+    font-size: clamp(0.85rem, 1vw, 0.95rem);
+    padding: clamp(0.5rem, 0.8vw, 0.8rem) clamp(1rem, 1.2vw, 1.2rem);
+  }
+    }
+    @media (max-width: 480px) {
+  .cta-btn {
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+    padding: clamp(0.4rem, 0.7vw, 0.6rem) clamp(0.8rem, 1vw, 1rem);
+  }
+}
