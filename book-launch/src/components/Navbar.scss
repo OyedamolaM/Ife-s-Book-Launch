@@ -13,7 +13,7 @@
   .logo {
     font-size: 1.6rem;
     font-weight: 700;
-    color: #1e3a8a; // deep blue
+    color: #1e3a8a;
     text-decoration: none;
     letter-spacing: 0.5px;
   }
@@ -23,47 +23,43 @@
     display: flex;
     gap: 2rem;
 
-    li {
-      a {
-        position: relative;
-        text-decoration: none;
-        font-size: 1rem;
-        font-weight: 500;
-        color: #333;
-        padding: 0.3rem 0;
-        transition: color 0.3s ease;
-        cursor: pointer;
+    li a {
+      position: relative;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #333;
+      padding: 0.3rem 0;
+      transition: color 0.3s ease;
+      cursor: pointer;
 
-        &:hover {
-          color: #1e3a8a;
-        }
+      &:hover {
+        color: #1e3a8a;
+      }
 
-        // underline animation
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -3px;
-          width: 0;
-          height: 2px;
-          background: #1e3a8a;
-          transition: width 0.3s ease;
-        }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background: #1e3a8a;
+        transition: width 0.3s ease;
+      }
 
-        &:hover::after,
-        &.active::after {
-          width: 100%;
-        }
+      &:hover::after,
+      &.active::after {
+        width: 100%;
+      }
 
-        &.active {
-          color: #1e3a8a;
-          font-weight: 600;
-        }
+      &.active {
+        color: #1e3a8a;
+        font-weight: 600;
       }
     }
   }
 
-  // Mobile menu toggle
   .menu-toggle {
     display: none;
     font-size: 1.5rem;
@@ -100,4 +96,9 @@
       }
     }
   }
+}
+
+/* Optional: smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
 }
