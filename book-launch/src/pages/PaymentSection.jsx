@@ -6,7 +6,7 @@ import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 
 export default function PaymentSection() {
-  const PUBLIC_KEY = "pk_test_xxxxxxxxxxxxxxxxxxxxx"; // Replace with your Paystack test key
+  const PUBLIC_KEY = "pk_test_0e0f6b8e4c084578cfffe327945dc65866cc2837"; // Replace with your Paystack test key
   const { cart, clearCart } = useCart();
   const navigate = useNavigate();
 
